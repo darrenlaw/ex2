@@ -34,6 +34,8 @@ window.onload = function () {
         if (userName == "" || userGender == "" || userClass == "" || userCity == "" || birthYear == "" || birthMonth == "" || animal == "" || monster == "") {
             alert("Please finish the form!");
 
+            return false;
+
         } else {
 
             //capture the msg element to change it's text and html
@@ -41,34 +43,41 @@ window.onload = function () {
 
 
             myMsg.innerHTML = "You, " + userName + ", born in " + birthMonth + " of the year " + birthYear + ", have been chosen as the hero that will serve to protect our Goddess from the forces that want to corrupt and control our world. You have been blessed with the powers of the " + userClass + "." + " We have taken you from " + userCity + " to come and protect us from the army of " + monster + " that serve the forces of evil. We have recruited the " + animal + " population as guides for your mission. Please, help us.";
+
             myMsg.className = "show";
 
-    var showClass = document.getElementById("showImg");
-                var classImg = document.createElement("img");
-                classImg.onload = function () {
-                    showClass.appendChild(classImg);
-                }
-                
-               
-        if (userClass == "Mage" || userClass == "mage") {
-                classImg.src = "images/mage.png";}
-        if (userClass == "Archer" || userClass == "archer") {
-                classImg.src = "images/archer.png";}
-        if (userClass == "Warrior" || userClass == "warrior") {
-                classImg.src = "images/warrior.png";}
-        if (userClass == "Rogue" || userClass == "rogue") {
-                classImg.src = "images/rogue.png";}
+            var showClass = document.getElementById("showImg");
+            var classImg = document.createElement("img");
             
+            classImg.onload = function () {
+
+                showClass.appendChild(classImg);
             }
 
-       showClass.className='displayImg'
+            //having certain keywords shows the related image
+            if (userClass == "Mage" || userClass == "mage") {
+                classImg.src = "images/mage.png";
+            }
+            else if (userClass == "Archer" || userClass == "archer") {
+                classImg.src = "images/archer.png";
+            }
+            else if (userClass == "Warrior" || userClass == "warrior") {
+                classImg.src = "images/warrior.png";
+            }
+            else if (userClass == "Rogue" || userClass == "rogue") {
+                classImg.src = "images/rogue.png";
+            }
+        }
 
+        showClass.className = "displayImg";
         //prevent page from reloading
         return false;
     }
 
+    
     //if user chooses "reset"
     function resetPage() {
+        
         //remove any text from myMsg
         myMsg.innerHTML = "";
         //change the class name
@@ -77,8 +86,9 @@ window.onload = function () {
         userName.value = "";
         //reset the userCity field
         userCity.value = "";
-        
-        showClass.className='hideImg';
+        //reset image source
+        //HOW DO I DO THIS. I TRIED EVERYTHING I KNOW.
+
         
         return false;
     }

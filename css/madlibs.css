@@ -81,12 +81,10 @@ p {
 
 .displayImg {
     visibility:visible;
-    display:block;
 }
 
 .hideImg {
     visibility: hidden;
-    display:none;
 }
 
 nav {
