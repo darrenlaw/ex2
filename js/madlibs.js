@@ -1,7 +1,7 @@
 window.onload = function () {
     //check that js is working
     console.log("reading");
-
+    
     //capture the submit event
     document.f.onsubmit = processForm;
 

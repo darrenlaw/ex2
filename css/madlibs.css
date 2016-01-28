@@ -105,3 +105,9 @@ footer a:link{
 footer a:visited {
     color:#000080;
 }
+
+h4 {
+    visibility: hidden;
+    display:none;
+    
+}
