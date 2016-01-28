@@ -5,7 +5,7 @@
 
 body {
     font-family: georgia, book antiqua, serif;
-    size: 14px;
+    font-size: 14px;
     background-color: #baf4ff;
     padding: 24px;
     color: white;
@@ -89,4 +89,19 @@ p {
 
 nav {
     margin-left:10px;
+}
+
+footer {
+    font-family: georgia, book antiqua, serif;
+    font-size: 14px;
+    margin-left:87%;
+}
+
+footer a:link{
+    text-decoration: none;
+    color:#000080;
+}
+
+footer a:visited {
+    color:#000080;
 }
